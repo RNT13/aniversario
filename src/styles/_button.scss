@@ -1,0 +1,32 @@
+@use 'var';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+
+    &--primary {
+        color: var.$txt1Color;
+        background-color: var.$button;
+    }
+
+    &:hover {
+        scale: 1.1;
+        color: var.$txt1Color;
+        background-color: lighten(var.$button, 5%);
+    }
+
+    @media (max-width: 940px) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,51 @@
+@use 'var';
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/balão\ bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    
+
+    .container {
+        position: relative;
+    }
+
+    &::before  {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var.$txt2Color;
+        content: '';
+        opacity: 70%;
+
+    }
+
+    &__text {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 60px;
+        line-height: 60px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__logo {
+            height: 40px;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}
